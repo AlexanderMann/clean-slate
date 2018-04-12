@@ -1,4 +1,6 @@
 # Data Structure
+Use the data in [`flow.json`](https://github.com/AlexanderMann/clean-slate/blob/master/data/flow.json) with the following schema in mind. Intent of each piece of information is also laid out here.
+
 ## Nodes
 Nodes have the following structure:
 
@@ -7,10 +9,8 @@ Nodes have the following structure:
   "id":
   {"title":    "Important information about the node",
    "text":     "Details for the node",
-   "type":     "question", # One of: question, option, info, terminal
-   "children": ["id0", "id1"]},
-  ...
-  }}
+   "type":     "question",
+   "children": ["id0", "id1"]}}}
 ```
 
 ## Types
