@@ -1,0 +1,77 @@
+{
+   "nodes":{
+      "to-1a":{
+         "title":"Let's find out!",
+         "text":"",
+         "type":"option",
+         "children":[
+            "1a"
+         ]
+      },
+      "to-1c":{
+
+      },
+      "to-prop-47":{
+
+      },
+      "1b":{
+         "title":" Is it a felony conviction for possession of drugs?",
+         "text":"(health and safety code, 11350,11357, 11377)",
+         "type":"question",
+         "children":[
+            "to-prop-47",
+            "to-1c"
+         ]
+      },
+      "to-1b":{
+         "title":"No",
+         "text":"",
+         "type":"option",
+         "children":[
+            "1b"
+         ]
+      },
+      "to-2-yes":{
+         "title":"Yes",
+         "text":"",
+         "type":"option",
+         "children":[
+            "2"
+         ]
+      },
+      "1":{
+         "title":"Can the case be reduced by a recent Proposition?",
+         "text":"",
+         "type":"question",
+         "children":[
+            "to-1a"
+         ]
+      },
+      "to-reduction":{
+         "title":"Yes",
+         "text":"",
+         "type":"option",
+         "children":[
+            "reduction-lists"
+         ]
+      },
+      "1a":{
+         "title":"Does the case involve MJ?",
+         "text":"",
+         "type":"question",
+         "children":[
+            "to-reduction",
+            "to-1b"
+         ]
+      },
+      "reduction-lists":{
+         "title":"Are you eligible for MJ reduction?",
+         "text":"[see MJ reduction lists]",
+         "type":"question",
+         "children":[
+            "to-1b",
+            "to-2-yes"
+         ]
+      }
+   }
+}
