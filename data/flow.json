@@ -1,5 +1,5 @@
 {
-   "root": "a",
+   "root":"1",
    "nodes":{
       "to-1a":{
          "title":"Let's find out!",
@@ -10,26 +10,28 @@
          ]
       },
       "to-1c":{
+         "title":"",
+         "text":"",
+         "type":"question",
+         "children":[
 
+         ]
       },
       "to-prop-47":{
+         "title":"",
+         "text":"",
+         "type":"question",
+         "children":[
 
+         ]
       },
       "1b":{
-         "title":" Is it a felony conviction for possession of drugs?",
+         "title":"Is it a felony conviction for possession of drugs?",
          "text":"(health and safety code, 11350,11357, 11377)",
          "type":"question",
          "children":[
             "to-prop-47",
             "to-1c"
-         ]
-      },
-      "to-1b":{
-         "title":"No",
-         "text":"",
-         "type":"option",
-         "children":[
-            "1b"
          ]
       },
       "to-2-yes":{
@@ -62,7 +64,15 @@
          "type":"question",
          "children":[
             "to-reduction",
-            "to-1b"
+            "to-1b-no"
+         ]
+      },
+      "2":{
+         "title":"",
+         "text":"",
+         "type":"question",
+         "children":[
+
          ]
       },
       "reduction-lists":{
@@ -70,8 +80,16 @@
          "text":"[see MJ reduction lists]",
          "type":"question",
          "children":[
-            "to-1b",
-            "to-2-yes"
+            "to-2-yes",
+            "to-1b-no"
+         ]
+      },
+      "to-1b-no":{
+         "title":"No",
+         "text":"",
+         "type":"option",
+         "children":[
+            "1b"
          ]
       }
    }
