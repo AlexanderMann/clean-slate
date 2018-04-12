@@ -1,4 +1,5 @@
-{:nodes {:1
+{:root :1
+ :nodes {:1
          {:title "Can the case be reduced by a recent Proposition?"
           :text ""
           :type :question
