@@ -83,6 +83,7 @@ body {
   display: flex;
   padding: 1em 15% 2em;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .option {
   background-color: #4FC5E8;
@@ -91,5 +92,5 @@ body {
   font-weight: 500;
   padding: 5px 15px;
   border-radius: 4px;
-
+  margin: 0 0 5px;
 }

@@ -1,8 +1,14 @@
-{
-   "root":"1",
+{  
+  "root":"1",
    "nodes":{
-      "to-1a":{
-         "title":"Let's find out!",
+     "restart":{
+       "title":"Restart",
+       "text":"",
+       "type":"option",
+       "children":[ "1" ]
+     },
+     "to-1a":{
+         "title":"Yes",
          "text":"",
          "type":"option",
          "children":[
@@ -10,19 +16,17 @@
          ]
       },
       "to-1c":{
-         "title":"",
+         "title":"No",
          "text":"",
-         "type":"question",
-         "children":[
-
-         ]
+         "type":"option",
+         "children":[ "1c" ]
       },
       "to-prop-47":{
-         "title":"",
+         "title":"Yes",
          "text":"",
          "type":"question",
          "children":[
-
+           "prop-47"
          ]
       },
       "1b":{
@@ -34,7 +38,7 @@
             "to-1c"
          ]
       },
-      "to-2-yes":{
+      "to-2-Yes":{
          "title":"Yes",
          "text":"",
          "type":"option",
@@ -43,12 +47,10 @@
          ]
       },
       "1":{
-         "title":"Can the case be reduced by a recent Proposition?",
+         "title":"Check to see if case be reduced by a recent Proposition?",
          "text":"",
          "type":"question",
-         "children":[
-            "to-1a"
-         ]
+         "children":["to-1a", "to-2-no" ]
       },
       "to-reduction":{
          "title":"Yes",
@@ -67,30 +69,247 @@
             "to-1b-no"
          ]
       },
-      "2":{
-         "title":"",
-         "text":"",
-         "type":"question",
-         "children":[
-
-         ]
-      },
       "reduction-lists":{
          "title":"Are you eligible for MJ reduction?",
-         "text":"[see MJ reduction lists]",
+         "text":" please check [MJ reduction lists]",
          "type":"question",
-         "children":[
-            "to-2-yes",
-            "to-1b-no"
-         ]
+         "children":[ "to-2-Yes", "to-1b-no" ]
       },
       "to-1b-no":{
          "title":"No",
          "text":"",
          "type":"option",
-         "children":[
-            "1b"
-         ]
+         "children":[ "1b" ]
+      },
+      "to-2-no" :{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "2" ]
+      },
+      "prop-47":{
+        "title":"Please see Prop 47 exclusion list",
+        "text":"[link to list]",
+        "type":"question",
+        "children":[ "to-2-Yes", "to-2-no" ]
+      },
+      "1c":{
+        "title":"Is it a felony conviction for theft of under $950 ",
+        "text":"(Penal Code 490.2, 459.5, 496(a), 473(b), 476a,(b), 666)",
+        "type":"question",
+        "children":["to-prop-47", "to-2-no"]
+      },
+      "2":{
+        "title":"Check if case eligible for dismissal or reduction under the Penal Code?",
+        "text":"",
+        "type":"question",
+        "children":["to-2a-yes", "to-3-no"]
+      },
+      "to-2a-yes":{
+        "title":"Yes",
+        "text":"",
+        "type":"option",
+        "children":[ "2a" ]
+      },
+      "2a":{
+        "title":"Was the sentance probation?",
+        "text":"If a person was initially sentenced to some jail time and probation, this is probation. However, if probation was revoked and the person finished their term in prison or jail, it is NOT probation",
+        "type":"question",
+        "children":["to-2b-yes", "to-3-no"]
+      },
+      "to-3-no":{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "3" ]
+      },
+      "to-2b-yes":{
+        "title":"Yes",
+        "text":"",
+        "type":"option",
+        "children":[ "2b" ]
+      },
+      "2b":{
+        "title":"Is the conviction listed on the wobbler or wobblett list? ",
+        "text":"[insert lists here]",
+        "type":"question",
+        "children":["to-2e-yes", "to-2c-no"]
+      },
+      "to-2c-no":{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "2c" ]
+      },
+      "to-2e-yes":{
+        "title":"Yes",
+        "text":"",
+        "type":"option",
+        "children":[ "2e" ]
+      },
+      "2c":{
+        "title":"Is the conviction on the “always discretionary” list?",
+        "text":"[insert lists here]",
+        "type":"question",
+        "children":["to-2e-yes", "to-2d-no"]
+      },
+      "to-2d-no":{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "2d" ]
+      },
+      "2d":{
+        "title":"Did you complete probation without any additional convictions or probation revocations during probation?",
+        "text":"",
+        "type":"question",
+        "children":["to-expungment-yes", "to-2e-no"]
+      },
+      "to-expungment-yes":{
+        "title":"Yes",
+        "text":"",
+        "type":"option",
+        "children":[ "expungment"]
+      },
+      "to-expungment-no":{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "expungment"]
+      },
+      "expungment":{
+        "title":"Expungment",
+        "text":"you are eligible for a mandatory expungment under 1203.4. File a CR180, CR181, fee waiver, and any other county specific forms, but you are not required to filed a declaration (MC-31)",
+        "type":"question",
+        "children":["restart" ]
+      },
+      "to-2e-no":{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "2e" ]
+      },
+      "2e":{
+        "title":"You are eligible...",
+        "text":"for a discretionary expungement under 1203.4. File a CR180, CR181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.",
+        "type":"question",
+        "children":["restart"]
+      },
+      "3":{
+        "title":"What was the level of conviction?",
+        "text":"",
+        "type":"question",
+        "children":["to-3b-felony", "to-3g-misdemeanor", "to-3g-infraction"]
+      },
+      "to-3b-felony":{
+        "title":"Felony",
+        "text":"",
+        "type":"option",
+        "children":[ "3b" ]
+
+      },
+      "to-3g-misdemeanor":{
+        "title":"Misdemeanor",
+        "text":"",
+        "type":"option",
+        "children":[ "3g" ]
+
+      },
+      "to-3g-infraction":{
+        "title":"Infraction",
+        "text":"",
+        "type":"option",
+        "children":[ "3g" ]
+      },
+      "3b":{
+        "title":"When was the conviction?",
+        "text":"",
+        "type":"question",
+        "children":[ "to-3c-before", "to-3f-after" ]
+      },
+      "to-3c-before":{
+        "title":"Before October 1, 2011",
+        "text":"",
+        "type":"option",
+        "children":[ "3c" ]
+      },
+      "to-3f-after":{
+        "title":"After October 1, 2011",
+        "text":"",
+        "type":"option",
+        "children":[ "3f" ]
+      },
+      "3c":{
+        "title":"Does the case include a serious or violent conviction on the serious and violent list",
+        "text":"[insert or link list here]",
+        "type":"question",
+        "children":[ "to-rehab-yes", "to-3d-no" ]
+      },
+      "to-rehab-yes":{
+        "title":"Yes",
+        "text":"",
+        "type":"option",
+        "children":[ "rehab" ]
+      },
+      "to-3d-no":{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "3d" ]
+      },
+      "rehab":{
+        "title":"you are not eligible for a dismissal for this conviction, but may be eligible for a Certificate of Rehabilitation",
+        "text":"[attach information]",
+        "type":"question",
+        "children":[ "restart" ]
+      },
+      "3e":{
+        "title":"Does the case include an otherwise excluded conviction",
+        "text":"[attach information]",
+        "type":"question",
+        "children":[ "to-rehab-yes", "to-expungment-no" ]
+      },
+      "3f":{
+        "title":"Did you go to state prison or to county jail for the sentence?",
+        "text":"",
+        "type":"question",
+        "children":[ "to-rehab-prison", "to-expungment-jail" ]
+      },
+      "to-rehab-prison":{
+        "title":"Prison",
+        "text":"",
+        "type":"option",
+        "children":[ "rehab" ]
+      },
+      "to-expungment-jail":{
+        "title":"Jail",
+        "text":"",
+        "type":"option",
+        "children":[ "expungment" ]
+      },
+      "3g":{
+        "title":"Is the conviction listed on the wobblett list?",
+        "text":"[insert list here]",
+        "type":"question",
+        "children":[ "to-3h-yes", "to-3h-no" ]
+      },
+      "to-3h-yes":{
+        "title":"Yes",
+        "text":"",
+        "type":"option",
+        "children":[ "3h" ]
+      },
+      "to-3h-no":{
+        "title":"No",
+        "text":"",
+        "type":"option",
+        "children":[ "3h" ]
+      },
+      "3h":{
+        "title":" Did one year pass, from the date of release or sentencing—whichever happened later-- without another conviction?",
+        "text":"",
+        "type":"question",
+        "children":[ "to-expungment-yes", "to-expungment-no" ]
       }
    }
 }
