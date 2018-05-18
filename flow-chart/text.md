@@ -22,7 +22,7 @@
 ### a. What was the sentence?
 - i. Probation [note: if a person was initially sentenced to some jail time and
   probation, this is probation. However, if probation was revoked and the
-  person finished their term in prison or jail, it is NOT probation] – got to
+  person finished their term in prison or jail, it is NOT probation] – go to
   II.b. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you are eligible to petition for relief under Penal Code 1203.4
 - ii. Everything except probation – go to III.
 
@@ -36,10 +36,10 @@
 - ii. No, go to II. D.
 
 ### d. Did you complete probation without any additional convictions or probation revocations during probation?
-- i. If yes: ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)you are eligible for a mandatory expungment under 1203.4. File a
+- i. If yes: ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)you are eligible for a mandatory expungement under 1203.4. File a
   CR180, CR181, fee waiver, and any other county specific forms, but you
   are not required to filed a declaration (MC-31)
-- ii. If no, got to II.e.
+- ii. If no, go to II.e.
 
 ### e. You are eligible...
 ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)...for a discretionary expungement under 1203.4. File a CR180,
@@ -52,7 +52,7 @@ show the court why it should grant your petition.
 
 Flow Chart Outline for CA Criminal Record Expungement
 
-- i. Felony- got to III.b.
+- i. Felony- go to III.b.
 - ii. Misdemeanor – go to III.g. [note, if the conviction is eligible for reduction
   under a proposition, treat it as the reduced level] – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you are eligible for
   dismissal under PC 1203.4a.
