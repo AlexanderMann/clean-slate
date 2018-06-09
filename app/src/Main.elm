@@ -63,14 +63,30 @@ subscriptions model =
 
 type Msg
     = NoOp
-    | Answer String
+    | Answer Node
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Answer x ->
-            ( { model | currentNodeId = x }, Cmd.none )
+            if (.nodeType x) == "option" then
+                ( { model
+                    | currentNodeId =
+                        List.head (.children x)
+                            |> (\z ->
+                                    case z of
+                                        Just a ->
+                                            a
+
+                                        Nothing ->
+                                            "UNKNOWN"
+                               )
+                  }
+                , Cmd.none
+                )
+            else
+                ( { model | currentNodeId = (.id x) }, Cmd.none )
 
         NoOp ->
             ( model, Cmd.none )
@@ -83,6 +99,21 @@ update msg model =
 getNode : String -> List Node -> Maybe Node
 getNode id nodes =
     List.filter (\x -> x.id == id) nodes |> List.head
+
+
+getMissingNode : String -> List Node -> Node
+getMissingNode id nodes =
+    case getNode id nodes of
+        Nothing ->
+            { title = "UNKNOWN Missing Node"
+            , id = "UNKNOWN"
+            , children = []
+            , nodeType = "none"
+            , info = ""
+            }
+
+        Just x ->
+            x
 
 
 view : Model -> Html Msg
@@ -107,20 +138,10 @@ card : String -> List Node -> Html Msg
 card id nodes =
     let
         node =
-            case getNode id nodes of
-                Nothing ->
-                    { title = "Missing Node"
-                    , id = "0"
-                    , children = []
-                    , nodeType = "none"
-                    , info = ""
-                    }
-
-                Just x ->
-                    x
+            (getMissingNode id nodes)
 
         options =
-            if (.id node) /= "0" then
+            if (.id node) /= "UNKNOWN" then
                 -- <function> : List String -> Maybe Node
                 List.map (\x -> ( x, nodes )) (.children node)
                     |> List.map (\x -> getNode (Tuple.first x) (Tuple.second x))
@@ -137,13 +158,13 @@ card id nodes =
                                                     Nothing ->
                                                         "1"
                                            )
-                                        |> (\b -> div [ class "option", onClick (Answer b) ] [ text (.title y) ])
+                                        |> (\b -> div [ class "option", onClick (Answer (getMissingNode b nodes)) ] [ text (.title y) ])
 
                                 Nothing ->
                                     div [] []
                         )
             else
-                [ p [] [ text "End of line plase see results" ] ]
+                [ p [] [ text "End of line please see results" ] ]
     in
         div [ class "card" ]
             [ p [ class "question" ] [ text (.title node) ]
