@@ -1,8 +1,8 @@
 module Main exposing (..)
 
 --import Json.Decode exposing (..)
---import Debug exposing (log)
 
+import Debug exposing (log)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
@@ -70,22 +70,10 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Answer x ->
-            if (.nodeType x) == "option" then
-                ( { model
-                    | currentNodeId =
-                        List.head (.children x)
-                            |> (\z ->
-                                    case z of
-                                        Just a ->
-                                            a
-
-                                        Nothing ->
-                                            "UNKNOWN"
-                               )
-                  }
-                , Cmd.none
-                )
-            else
+            let
+                _ =
+                    Debug.log "Answered Node:" x
+            in
                 ( { model | currentNodeId = (.id x) }, Cmd.none )
 
         NoOp ->
@@ -140,11 +128,13 @@ card id nodes =
         node =
             (getMissingNode id nodes)
 
+        _ =
+            Debug.log "Displayed Node:" node
+
         options =
             if (.id node) /= "UNKNOWN" then
                 -- <function> : List String -> Maybe Node
-                List.map (\x -> ( x, nodes )) (.children node)
-                    |> List.map (\x -> getNode (Tuple.first x) (Tuple.second x))
+                List.map (\x -> (getNode x nodes)) (.children node)
                     |> List.map
                         (\x ->
                             case x of
@@ -158,7 +148,13 @@ card id nodes =
                                                     Nothing ->
                                                         "1"
                                            )
-                                        |> (\b -> div [ class "option", onClick (Answer (getMissingNode b nodes)) ] [ text (.title y) ])
+                                        |> (\b ->
+                                                div
+                                                    [ class "button"
+                                                    , onClick (Answer y)
+                                                    ]
+                                                    [ text (.title y) ]
+                                           )
 
                                 Nothing ->
                                     div [] []
@@ -166,7 +162,7 @@ card id nodes =
             else
                 [ p [] [ text "End of line please see results" ] ]
     in
-        div [ class "card" ]
+        div [ class ("card " ++ (.nodeType node) ++ "Type") ]
             [ p [ class "question" ] [ text (.title node) ]
             , div [ class "hr" ] []
             , div [ class "info" ] [ text (.info node) ]

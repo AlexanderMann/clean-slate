@@ -1,9 +1,10 @@
 body {
-  font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Source Sans Pro", "Trebuchet MS", "Lucida Grande",
+    "Bitstream Vera Sans", "Helvetica Neue", sans-serif;
   margin: 0;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   color: #444444;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 #topbar {
   background-color: white;
@@ -16,7 +17,7 @@ body {
 }
 
 #topbar h1 {
-  margin: 0; 
+  margin: 0;
   font-size: 18px;
 }
 
@@ -24,11 +25,12 @@ body {
   padding: 0 2em;
 }
 
-#results, #questions {
+#results,
+#questions {
   display: flex;
   flex-direction: column;
 }
-#results p{
+#results p {
   text-align: left;
 }
 
@@ -38,7 +40,7 @@ body {
   line-height: normal;
   font-size: 16px;
   letter-spacing: -0.03em;
-  border: 2px solid #DDDDDD;
+  border: 2px solid #dddddd;
   /*box-sizing: border-box;*/
   border-radius: 4px;
   display: inline;
@@ -48,7 +50,7 @@ body {
 
 .title.active {
   color: white;
-  background-color: #40B097;
+  background-color: #40b097;
   border: none;
 }
 
@@ -56,7 +58,7 @@ body {
   background-color: #fff;
   width: 100%;
   /*box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);*/
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   border-radius: 2px;
   padding-top: 1em;
   margin-top: 1.5em;
@@ -68,13 +70,12 @@ body {
   font-size: 16px;
   letter-spacing: -0.01em;
   margin: 0 1em 1em;
-
 }
 .hr {
- /*border-style: dotted;*/
- border-bottom: 3px dotted #DDDDDD;
- height: 1px;
- width: 100%;
+  /*border-style: dotted;*/
+  border-bottom: 3px dotted #dddddd;
+  height: 1px;
+  width: 100%;
 }
 .info {
   padding: 1em;
@@ -85,12 +86,24 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.option {
-  background-color: #4FC5E8;
+.button {
   color: #fff;
+  background-color: #4fc5e8;
   font-size: 30px;
   font-weight: 500;
   padding: 5px 15px;
   border-radius: 4px;
   margin: 0 0 5px;
+}
+.questionType {
+  background-color: white;
+}
+.optionType {
+  background-color: blue;
+}
+.infoType {
+  background-color: orange;
+}
+.terminalType {
+  background-color: red;
 }
