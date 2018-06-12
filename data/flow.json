@@ -5,7 +5,7 @@
       "title": "PC 1203.4a Dismissal",
       "text": "You are eligible for dismissal under PC 1203.4a.",
       "type": "info",
-      "children": ["3g"]
+      "children": ["to-3g"]
     },
     "before-oct-1-2011": {
       "title": "Before October 1, 2011",
@@ -18,6 +18,12 @@
       "text": "",
       "type": "option",
       "children": ["2c"]
+    },
+    "to-3g": {
+      "title": "Continue...",
+      "text": "",
+      "type": "option",
+      "children": ["3g"]
     },
     "probation-yes": {
       "title": "Probation",

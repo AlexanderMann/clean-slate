@@ -223,6 +223,11 @@
            {:title "PC 1203.4a Dismissal"
             :text "You are eligible for dismissal under PC 1203.4a."
             :type :info
+            :children [:to-3g]}
+           :to-3g
+           {:title "Continue..."
+            :text ""
+            :type :option
             :children [:3g]}
            :3b
            {:title "When was the conviction?"
