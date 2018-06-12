@@ -224,7 +224,7 @@
     "3a": {
       "title": "Everything else, other than probation",
       "text":
-        "What was the level of conviction? [Flow Chart Outline for CA Criminal Record Expungement]",
+        "What was the level of conviction? [Flow Chart Outline for CA Criminal Record Expungement]. Note, if the conviction is eligible for reduction under a proposition, treat it as the reduced level.",
       "type": "question",
       "children": ["felony-3b", "misdemeanor-3g", "infraction-3g"]
     },
@@ -333,8 +333,7 @@
     },
     "misdemeanor-3g": {
       "title": "Misdemeanor",
-      "text":
-        "[note, if the conviction is eligible for reduction under a proposition, treat it as the reduced level]",
+      "text": "",
       "type": "option",
       "children": ["3g-info"]
     },
