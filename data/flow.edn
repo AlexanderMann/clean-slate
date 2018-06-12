@@ -80,7 +80,7 @@
             :type :info
             :children [:to-1d]}
            :to-1d
-           {:title "Continue on to: 1d"
+           {:title "Continue..."
             :text ""
             :type :option
             :children [:1d]}
@@ -100,7 +100,7 @@
             :type :option
             :children [:3h]}
            :to-2
-           {:title "Continue on to: 2"
+           {:title "Continue..."
             :text ""
             :type :option
             :children [:2a]}

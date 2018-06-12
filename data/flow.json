@@ -33,7 +33,7 @@
       "children": ["to-2-yes", "to-1b-no"]
     },
     "to-1d": {
-      "title": "Continue on to: 1d",
+      "title": "Continue...",
       "text": "",
       "type": "option",
       "children": ["1d"]
@@ -314,7 +314,7 @@
       "children": ["to-2c-felony", "to-2d-misdemeanor", "to-2f-infraction"]
     },
     "to-2": {
-      "title": "Continue on to: 2",
+      "title": "Continue...",
       "text": "",
       "type": "option",
       "children": ["2a"]
