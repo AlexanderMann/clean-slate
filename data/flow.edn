@@ -118,12 +118,17 @@
            {:title "Penal Code 1203.4 Petition"
             :text "You are eligible to petition for relief under Penal Code 1203.4"
             :type :info
-            :children [:2b]}
+            :children [:to-2b]}
            :probation-no
            {:title "Everything except probation"
             :text ""
             :type :option
             :children [:3a]}
+           :to-2b
+           {:title "Continue..."
+            :text ""
+            :type :option
+            :children [:2b]}
            :2b
            {:title "What is the level of conviction?"
             :text ""
@@ -156,11 +161,6 @@
             :children [:2e]}
            :to-discretionary-expungement-yes
            {:title "Yes"
-            :text ""
-            :type :option
-            :children [:discretionary-expungement]}
-           :to-discretionary-expungement-no
-           {:title "No"
             :text ""
             :type :option
             :children [:discretionary-expungement]}

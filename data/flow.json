@@ -42,7 +42,7 @@
       "title": "Penal Code 1203.4 Petition",
       "text": "You are eligible to petition for relief under Penal Code 1203.4",
       "type": "info",
-      "children": ["2b"]
+      "children": ["to-2b"]
     },
     "2c": {
       "title": "Is the conviction listed on the wobbler?",
@@ -325,6 +325,12 @@
         "[note, if the conviction is eligible for reduction under a proposition, treat it as the reduced level]",
       "type": "option",
       "children": ["3g-info"]
+    },
+    "to-2b": {
+      "title": "Continue...",
+      "text": "",
+      "type": "option",
+      "children": ["2b"]
     },
     "mandatory-expungement": {
       "title": "Mandatory expungement 1203.4",
