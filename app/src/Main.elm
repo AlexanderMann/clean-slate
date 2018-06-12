@@ -63,7 +63,7 @@ subscriptions model =
 
 type Msg
     = NoOp
-    | Answer Node
+    | Answer String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -74,7 +74,7 @@ update msg model =
                 _ =
                     Debug.log "Answered Node:" x
             in
-                ( { model | currentNodeId = (.id x) }, Cmd.none )
+                ( { model | currentNodeId = x }, Cmd.none )
 
         NoOp ->
             ( model, Cmd.none )
@@ -89,16 +89,26 @@ getNode id nodes =
     List.filter (\x -> x.id == id) nodes |> List.head
 
 
+isMissingNode : Node -> Bool
+isMissingNode node =
+    (.id node) == "UNKNOWN"
+
+
+missingNode : Node
+missingNode =
+    { title = "UNKNOWN Missing Node"
+    , id = "UNKNOWN"
+    , children = []
+    , nodeType = "none"
+    , info = ""
+    }
+
+
 getMissingNode : String -> List Node -> Node
 getMissingNode id nodes =
     case getNode id nodes of
         Nothing ->
-            { title = "UNKNOWN Missing Node"
-            , id = "UNKNOWN"
-            , children = []
-            , nodeType = "none"
-            , info = ""
-            }
+            (missingNode)
 
         Just x ->
             x
@@ -122,6 +132,40 @@ view model =
         ]
 
 
+option : String -> List Node -> Html Msg
+option id nodes =
+    let
+        node =
+            (getMissingNode id nodes)
+
+        _ =
+            (Debug.log "--Option Node:" node)
+
+        error =
+            (p [ class "error" ] [ text "Error Occurred" ])
+
+        childId =
+            List.head (.children node)
+                |> (\z ->
+                        case z of
+                            Just a ->
+                                a
+
+                            Nothing ->
+                                "UNKNOWN"
+                   )
+    in
+        if (.nodeType node) == "option" && childId /= "UNKNOWN" then
+            (button
+                [ class "button"
+                , onClick (Answer childId)
+                ]
+                [ text (.title node) ]
+            )
+        else
+            error
+
+
 card : String -> List Node -> Html Msg
 card id nodes =
     let
@@ -129,46 +173,21 @@ card id nodes =
             (getMissingNode id nodes)
 
         _ =
-            Debug.log "Displayed Node:" node
+            (Debug.log "Displayed Node:" node)
 
         options =
-            if (.id node) /= "UNKNOWN" then
-                -- <function> : List String -> Maybe Node
-                List.map (\x -> (getNode x nodes)) (.children node)
-                    |> List.map
-                        (\x ->
-                            case x of
-                                Just y ->
-                                    List.head (.children y)
-                                        |> (\z ->
-                                                case z of
-                                                    Just a ->
-                                                        a
-
-                                                    Nothing ->
-                                                        "1"
-                                           )
-                                        |> (\b ->
-                                                div
-                                                    [ class "button"
-                                                    , onClick (Answer y)
-                                                    ]
-                                                    [ text (.title y) ]
-                                           )
-
-                                Nothing ->
-                                    div [] []
-                        )
+            if (isMissingNode node) then
+                [ (p [] [ text "End of line please see results" ]) ]
             else
-                [ p [] [ text "End of line please see results" ] ]
+                List.map (\x -> (option x nodes)) (.children node)
     in
-        div [ class ("card " ++ (.nodeType node) ++ "Type") ]
-            [ p [ class "question" ] [ text (.title node) ]
-            , div [ class "hr" ] []
-            , div [ class "info" ] [ text (.info node) ]
-            , div [ class "options" ]
-                options
+        (div [ class ("card " ++ (.nodeType node) ++ "Type") ]
+            [ (p [ class "question" ] [ text (.title node) ])
+            , (div [ class "hr" ] [])
+            , (div [ class "info" ] [ text (.info node) ])
+            , (div [ class "options" ] options)
             ]
+        )
 
 
 

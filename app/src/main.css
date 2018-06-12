@@ -57,7 +57,6 @@ body {
 .card {
   background-color: #fff;
   width: 100%;
-  /*box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);*/
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   border-radius: 2px;
   padding-top: 1em;
@@ -95,15 +94,18 @@ body {
   border-radius: 4px;
   margin: 0 0 5px;
 }
+.error {
+  background-color: red;
+}
 .questionType {
-  background-color: white;
+  box-shadow: 0 1px 2px 0 gray;
 }
 .optionType {
-  background-color: blue;
+  box-shadow: 0 1px 2px 0 blue;
 }
 .infoType {
-  background-color: orange;
+  box-shadow: 0 1px 2px 0 orange;
 }
 .terminalType {
-  background-color: red;
+  box-shadow: 0 1px 2px 0 red;
 }
