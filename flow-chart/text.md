@@ -1,22 +1,26 @@
 # Flow Chart Outline for CA Criminal Record Expungement
 ## I. Can the case be reduced by a recent Proposition?
-### a. Does the case involve MJ?
-- i. If yes, see if eligible for MJ reduction [see MJ reduction lists],
+### a. Does the case involve marijuana?
+- i. If yes, see if eligible for marijuana reduction [Prop 64 cheat sheet],
   - 1. If still yes, move on to II.- ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you will file a Prop 64 petition
   - 2. If now no, move on to I.b.
 - ii. If no, move on to I.b.
 
-### b. Is it a felony conviction for possession of drugs (health and safety code, 11350,11357, 11377)
-- i. If yes, see Prop 47 exclusion list
-  - 1. If still yes, move on to II. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you will file a Prop 47 petition
-  - 2. If now no, move on to II.
+### b. Is it a felony conviction for possession of drugs (health and safety code, 11350, 11357, 11377)
+- i. If yes, Do you have a prior on the Prop 47 exclusions list?
+  - 1. If yes, move on to II.
+  - 2. If still yes, move on to II. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you will file a Prop 47 petition
 - ii. If no, move on to I.c.
 
 ### c. Is it a felony conviction for theft of under $950 (Penal Code 490.2, 459.5, 496(a), 473(b), 476a,(b), 666)
-- i. If yes, see Prop 47 exclusion list
-  - 1. If still yes, move on to II. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you will file a Prop 47 petition
-  - 2. If now no, move on to II.
+- i. If yes, Do you have a prior on the Prop 47 exclusions list?
+  - 1. If yes, move on to II.
+  - 2. If no, move on to II. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you will file a Prop 47 petition
 - ii. If no, move on to II.
+
+### d. What was the sentence?
+- i. Probation – go to II.d.
+- ii. Prison – go to III.h.
 
 ## II. Is the case eligible for dismissal or reduction under the Penal Code?
 ### a. What was the sentence?
@@ -26,32 +30,33 @@
   II.b. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you are eligible to petition for relief under Penal Code 1203.4
 - ii. Everything except probation – go to III.
 
-### b. Is the conviction listed on the wobbler or wobblett list? [insert lists here]
-- i. If no, go to II.c.
-- ii. If yes, go to II.e. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you are eligible to petition for reduction under penal
-  code 17(b) or 17(d)(2)
+### b. What is the level of conviction?
+- i. Felony go to II.c.
+- ii. Misdemeanor go to II.d.
+- iii. Infraction go to II.f.
 
-### c. Is the conviction on the “always discretionary” list? [insert list]
-- i. Yes- go to II.e
-- ii. No, go to II. D.
+### c. Is the conviction listed on the wobbler? [Felony list- just the wobblers]
+- i. If no, go to II.e.
+- ii. If yes: – ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)You are eligible for a discretionary expungement under 1203.4 and reduction under 17(b). File a CR-180, CR-181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.
 
-### d. Did you complete probation without any additional convictions or probation revocations during probation?
-- i. If yes: ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)you are eligible for a mandatory expungement under 1203.4. File a
-  CR180, CR181, fee waiver, and any other county specific forms, but you
-  are not required to filed a declaration (MC-31)
-- ii. If no, go to II.e.
+### d. Is the conviction listed on the wobblette list? [misdemeanor list—just the wobblettes]
+- i. If no, go to II.f.
+- ii. If yes: – ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)You are eligible for a discretionary expungement under 1203.4 and reduction under 17(d)(2). File a CR180, CR181, fee waiver, MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.
 
-### e. You are eligible...
-![#FF0000](https://placehold.it/15/FF0000/000000?text=+)...for a discretionary expungement under 1203.4. File a CR180,
-CR181, fee waiver, declaration of MC-31 form, letters of support from
-community members, and any other county specific forms. You will need to
-show the court why it should grant your petition.
+### e. Is the felony on the “always discretionary” list? [felony list, only the discretionary ones]
+- i. Yes: – ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)You are eligible for a discretionary expungement under 1203.4 and reduction under 17(d)(2). File a CR180, CR181, fee waiver, MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.
+- ii. No, go to II. g.
+
+### f. Is the misdemeanor on the “always discretionary” list? [misdemeanor list, only the discretionary only]
+- i. Yes: – ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)You are eligible for a discretionary expungement under 1203.4.File a CR180, CR181, fee waiver, MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.
+- ii. No, go to II. g.
+
+### g. Did you complete probation without any additional convictions or probation revocations during probation?
+- i. If yes: – ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)You are eligible for a mandatory expungement under 1203.4. File a CR180, CR181, fee waiver, and any other county specific forms, but you are not required to filed a declaration (MC-31)
+- ii. If no: – ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)You are eligible for a discretionary expungement under 1203.4. File a CR180, CR181, fee waiver, MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.
 
 ## III. Everything else, other than probation
 ### a. What was the level of conviction?
-
-Flow Chart Outline for CA Criminal Record Expungement
-
 - i. Felony- go to III.b.
 - ii. Misdemeanor – go to III.g. [note, if the conviction is eligible for reduction
   under a proposition, treat it as the reduced level] – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you are eligible for
@@ -89,8 +94,8 @@ Flow Chart Outline for CA Criminal Record Expungement
   You will need to show the court why it should grant your petition.
 
 ### g. Is the conviction listed on the wobblett list? [insert list here]
-- i. If no, go to II.h.
-- ii. If yes, go to II.h. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you are eligible to petition for reduction under penal code 17(d)(2)
+- i. If no, go to III.h.
+- ii. If yes, go to III.h. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you are eligible to petition for reduction under penal code 17(d)(2)
 
 ### h. Did one year pass, from the date of release or sentencing—whichever happened later-- without another conviction?
 - i. If yes: ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)you are eligible for a mandatory expungement under 1203.4. File a
