@@ -26,6 +26,7 @@ type alias Node =
 type alias Model =
     { currentNodeId : String
     , nodes : List Node
+    , results : List String
     }
 
 
@@ -39,6 +40,7 @@ initialModel : Model
 initialModel =
     { currentNodeId = ""
     , nodes = []
+    , results = []
     }
 
 
@@ -47,6 +49,7 @@ init flags =
     ( { initialModel
         | currentNodeId = flags.root
         , nodes = flags.nodes
+        , results = []
       }
     , Cmd.none
     )
@@ -63,18 +66,42 @@ subscriptions model =
 
 type Msg
     = NoOp
-    | Answer String
+    | Answer Node
+
+
+isResult : Node -> Bool
+isResult node =
+    case (.nodeType node) of
+        "info" ->
+            True
+
+        "terminal" ->
+            True
+
+        _ ->
+            False
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Answer x ->
+        Answer node ->
             let
                 _ =
-                    Debug.log "Answered Node:" x
+                    Debug.log "Answered Node:" node
+
+                newResults =
+                    if (isResult node) then
+                        List.append model.results [ (.id node) ]
+                    else
+                        model.results
             in
-                ( { model | currentNodeId = x }, Cmd.none )
+                ( { model
+                    | currentNodeId = (.id node)
+                    , results = newResults
+                  }
+                , Cmd.none
+                )
 
         NoOp ->
             ( model, Cmd.none )
@@ -122,14 +149,29 @@ view model =
         , div [ class "wrapper" ]
             [ div [ id "results" ]
                 [ div [ class "title" ] [ text "RESULTS" ]
-                , p [] [ text "- Answers some questions to see what reduction / petition may apply to your case." ]
+                , (resultsCard model.results model.nodes)
                 ]
             , div [ id "questions" ]
                 [ div [ class "title" ] [ text "QUESTIONS" ]
-                , card model.currentNodeId model.nodes
+                , (card model.currentNodeId model.nodes)
                 ]
             ]
         ]
+
+
+resultsCard : List String -> List Node -> Html Msg
+resultsCard resultIds nodes =
+    let
+        results =
+            List.map (\x -> (getMissingNode x nodes)) resultIds
+                |> List.map
+                    (\x ->
+                        (p [ class ("result " ++ (.nodeType x) ++ "Type") ]
+                            [ (text ("- " ++ (.title x) ++ " : " ++ (.info x))) ]
+                        )
+                    )
+    in
+        (p [] results)
 
 
 option : String -> List Node -> Html Msg
@@ -158,7 +200,7 @@ option id nodes =
         if (.nodeType node) == "option" && childId /= "UNKNOWN" then
             (button
                 [ class "button"
-                , onClick (Answer childId)
+                , onClick (Answer (getMissingNode childId nodes))
                 ]
                 [ text (.title node) ]
             )
