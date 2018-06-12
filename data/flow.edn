@@ -1,26 +1,31 @@
   {:root :1a
    :nodes {:1a
            {:title "Can the case be reduced by a recent Proposition?"
-            :text "Does the case involve MJ?"
+            :text "Does the case involve marijuana?"
             :type :question
-            :children [:to-mj-reduction :to-1b-no]}
-           :to-mj-reduction
+            :children [:to-marijuana-reduction :to-1b-no]}
+           :to-marijuana-reduction
            {:title "Yes"
             :text ""
             :type :option
-            :children [:mj-reduction-lists]}
+            :children [:marijuana-reduction-lists]}
            :to-1b-no
            {:title "No"
             :text ""
             :type :option
             :children [:1b]}
-           :mj-reduction-lists
-           {:title "Are you eligible for MJ reduction?"
-            :text "[see MJ reduction lists]"
+           :marijuana-reduction-lists
+           {:title "Are you eligible for marijuana reduction?"
+            :text "See [Prop 64 cheat sheet] if eligible for marijuana reduction"
             :type :question
             :children [:to-2-yes :to-1b-no]}
            :to-2-yes
            {:title "Yes"
+            :text ""
+            :type :option
+            :children [:2a]}
+           :to-2-no
+           {:title "No"
             :text ""
             :type :option
             :children [:to-2-info]}
@@ -29,28 +34,23 @@
             :text "You will file a Prop 47 petition"
             :type :info
             :children [:to-2]}
-           :to-2-no
+           :1b
+           {:title "Is it a felony conviction for possession of drugs?"
+            :text "(health and safety code, 11350, 11357, 11377)"
+            :type :question
+            :children [:to-1c-yes :to-prop-47-prior-exclusion-2-no]}
+           :to-prop-47-prior-exclusion-2-no
            {:title "No"
             :text ""
             :type :option
-            :children [:2a]}
-           :1b
-           {:title "Is it a felony conviction for possession of drugs?"
-            :text "(health and safety code, 11350,11357, 11377)"
-            :type :question
-            :children [:to-prop-47 :to-1c-no]}
-           :to-prop-47
-           {:title "Yes"
-            :text ""
-            :type :option
-            :children [:prop-47-exclusion-list]}
-           :prop-47-exclusion-list
-           {:title "Are you eligible for a Prop 47 Exclusion?"
+            :children [:prop-47-prior-exclusion-2]}
+           :prop-47-prior-exclusion-2
+           {:title "Do you have a prior on the Prop 47 exclusions list?"
             :text "[see Prop 47 Exclusion List]"
             :type :question
             :children [:to-2-yes :to-2-no]}
-           :to-1c-no
-           {:title "No"
+           :to-1c-yes
+           {:title "Yes"
             :text ""
             :type :option
             :children [:1c]}
@@ -58,7 +58,47 @@
            {:title "Is it a felony conviction for theft of under $950?"
             :text "(Penal Code 490.2, 459.5, 496(a), 473(b), 476a,(b), 666)"
             :type :question
-            :children [:to-prop-47 :to-2-no]}
+            :children [:to-2-yes :to-prop-47-prior-exclusion-1d-no]}
+           :to-prop-47-prior-exclusion-1d-no
+           {:title "No"
+            :text ""
+            :type :option
+            :children [:prop-47-prior-exclusion-1d]}
+           :prop-47-prior-exclusion-1d
+           {:title "Do you have a prior on the Prop 47 exclusions list?"
+            :text "[see Prop 47 Exclusion List]"
+            :type :question
+            :children [:to-2-yes :to-1d-no]}
+           :to-1d-no
+           {:title "No"
+            :text ""
+            :type :option
+            :children [:to-1d-info]}
+           :to-1d-info
+           {:title "Prop 47 Petition"
+            :text "You will file a Prop 47 petition"
+            :type :info
+            :children [:to-1d]}
+           :to-1d
+           {:title "Continue on to: 1d"
+            :text ""
+            :type :option
+            :children [:1d]}
+           :1d
+           {:title "What was the sentence?"
+            :text ""
+            :type :question
+            :children [:to-2d-probation :to-3h-prison]}
+           :to-2d-probation
+           {:title "Probation"
+            :text ""
+            :type :option
+            :children [:2d]}
+           :to-3h-prison
+           {:title "Prison"
+            :text ""
+            :type :option
+            :children [:3h]}
            :to-2
            {:title "Continue on to: 2"
             :text ""
@@ -85,50 +125,50 @@
             :type :option
             :children [:3a]}
            :2b
-           {:title "Is the conviction listed on the Wobbler or Wobblett list?"
-            :text "[insert lists here]"
+           {:title "What is the level of conviction?"
+            :text ""
             :type :question
-            :children [:to-2c-no :to-2e-yes-wobb]}
-           :to-2c-no
-           {:title "No"
+            :children [:to-2c-felony :to-2d-misdemeanor :to-2f-infraction]}
+           :to-2c-felony
+           {:title "Felony"
             :text ""
             :type :option
             :children [:2c]}
-           :to-2e-yes-wobb
-           {:title "Yes"
+           :to-2d-misdemeanor
+           {:title "Misdemeanor"
             :text ""
             :type :option
-            :children [:to-2e-info]}
-           :to-2e-info
-           {:title "Penal Code 17(b)/17(d)(2) Petition"
-            :text "You are eligible to petition for reduction under penal code 17(b) or 17(d)(2)"
-            :type :info
-            :children [:2e]}
+            :children [:2d]}
+           :to-2f-infraction
+           {:title "Infraction"
+            :text ""
+            :type :option
+            :children [:2f]}
            :2c
-           {:title "Is the conviction on the “always discretionary” list?"
-            :text "[insert always discretionary list]"
+           {:title "Is the conviction listed on the wobbler?"
+            :text "[Felony list- just the wobblers]"
             :type :question
-            :children [:to-2e-yes :to-2d-no]}
-           :to-2e-yes
-           {:title "Yes"
-            :text ""
-            :type :option
-            :children [:2e]}
+            :children [:to-2e-no :to-discretionary-expungement-yes]}
            :to-2e-no
            {:title "No"
             :text ""
             :type :option
             :children [:2e]}
-           :to-2d-no
+           :to-discretionary-expungement-yes
+           {:title "Yes"
+            :text ""
+            :type :option
+            :children [:discretionary-expungement]}
+           :to-discretionary-expungement-no
            {:title "No"
             :text ""
             :type :option
-            :children [:2d]}
+            :children [:discretionary-expungement]}
            :2d
-           {:title "Did you complete probation without any additional convictions or probation revocations during probation?"
-            :text ""
+           {:title "Is the conviction listed on the wobblette list?"
+            :text "[misdemeanor list—just the wobblettes]"
             :type :question
-            :children [:to-mandatory-expungement-yes :to-2e-no]}
+            :children [:to-2f-no :to-discretionary-expungement-yes]}
            :to-mandatory-expungement-yes
            {:title "Yes"
             :text ""
@@ -140,10 +180,25 @@
             :type :terminal
             :children []}
            :2e
-           {:title "You are eligible..."
-            :text "...for a discretionary expungement under 1203.4. File a CR180, CR181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition."
-            :type :terminal
-            :children []}
+           {:title "Is the felony on the “always discretionary” list?"
+            :text "[felony list, only the discretionary ones]"
+            :type :question
+            :children [:to-discretionary-expungement-yes :to-2g-no]}
+           :to-2g-no
+           {:title "No"
+            :text ""
+            :type :option
+            :children [:2g]}
+           :2f
+           {:title "Is the misdemeanor on the “always discretionary” list?"
+            :text "[misdemeanor list, only the discretionary only]"
+            :type :question
+            :children [:to-discretionary-expungement-yes :to-2g-no]}
+           :2g
+           {:title "Did you complete probation without any additional convictions or probation revocations during probation?"
+            :text ""
+            :type :question
+            :children [:to-mandatory-expungement-yes :to-discretionary-expungement-no]}
            :3a
            {:title "Everything else, other than probation"
             :text "What was the level of conviction? [Flow Chart Outline for CA Criminal Record Expungement]"
@@ -226,8 +281,8 @@
             :type :option
             :children [:discretionary-expungement]}
            :discretionary-expungement
-           {:title "You are eligible for a Discretionary Expungement under 1203.42."
-            :text "File a CR180, CR181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition."
+           {:title "You are eligible for a Discretionary Expungement under 1203.42 and reduction under 17(b)"
+            :text "File a CR-180, CR-181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition."
             :type :terminal
             :children []}
            :3f

@@ -9,7 +9,7 @@
 ### b. Is it a felony conviction for possession of drugs (health and safety code, 11350, 11357, 11377)
 - i. If yes, Do you have a prior on the Prop 47 exclusions list?
   - 1. If yes, move on to II.
-  - 2. If still yes, move on to II. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you will file a Prop 47 petition
+  - 2. If no, move on to II. – ![#FF7000](https://placehold.it/15/FF7000/000000?text=+)you will file a Prop 47 petition
 - ii. If no, move on to I.c.
 
 ### c. Is it a felony conviction for theft of under $950 (Penal Code 490.2, 459.5, 496(a), 473(b), 476a,(b), 666)

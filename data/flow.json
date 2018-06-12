@@ -282,7 +282,7 @@
       "title": "No",
       "text": "",
       "type": "option",
-      "children": ["2a"]
+      "children": ["to-2"]
     },
     "prop-47-exclusion-list": {
       "title": "Are you eligible for a Prop 47 Exclusion?",
