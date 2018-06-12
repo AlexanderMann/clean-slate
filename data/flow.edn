@@ -326,6 +326,11 @@
            {:title "You are eligible to petition for reduction"
             :text "Under penal code 17(d)(2)"
             :type :info
+            :children [:to-3h]}
+           :to-3h
+           {:title "Continue..."
+            :text ""
+            :type :option
             :children [:3h]}
            :3h
            {:title "Did one year pass, from the date of release or sentencing—whichever happened later-- without another conviction?"
