@@ -16,7 +16,7 @@
             :children [:1b]}
            :marijuana-reduction-lists
            {:title "Are you eligible for marijuana reduction?"
-            :text "See [Prop 64 cheat sheet] if eligible for marijuana reduction"
+            :text "See following if eligible for marijuana reduction: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop64CheatSheet.pdf"
             :type :question
             :children [:to-2-yes :to-1b-no]}
            :to-2-yes
@@ -46,7 +46,7 @@
             :children [:prop-47-prior-exclusion-2]}
            :prop-47-prior-exclusion-2
            {:title "Do you have a prior on the Prop 47 exclusions list?"
-            :text "[see Prop 47 Exclusion List]"
+            :text "See Prop 47 Exclusion List: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop47ShortList.pdf"
             :type :question
             :children [:to-2-yes :to-2-no]}
            :to-1c-yes
@@ -66,7 +66,7 @@
             :children [:prop-47-prior-exclusion-1d]}
            :prop-47-prior-exclusion-1d
            {:title "Do you have a prior on the Prop 47 exclusions list?"
-            :text "[see Prop 47 Exclusion List]"
+            :text "See Prop 47 Exclusion List: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop47ShortList.pdf"
             :type :question
             :children [:to-2-yes :to-1d-no]}
            :to-1d-no
@@ -151,7 +151,7 @@
             :children [:2f]}
            :2c
            {:title "Is the conviction listed on the wobbler?"
-            :text "[Felony list- just the wobblers]"
+            :text "Felony list (just the wobblers): https://github.com/AlexanderMann/clean-slate/raw/master/documents/FelonyChecklist1.31.17.pdf"
             :type :question
             :children [:to-2e-no :to-discretionary-expungement-yes]}
            :to-2e-no
@@ -166,7 +166,7 @@
             :children [:discretionary-expungement]}
            :2d
            {:title "Is the conviction listed on the wobblette list?"
-            :text "[misdemeanor list—just the wobblettes]"
+            :text "Misdemeanor list (just the wobblettes) https://github.com/AlexanderMann/clean-slate/raw/master/documents/MisdemeanorChecklist3.8.16.pdf"
             :type :question
             :children [:to-2f-no :to-discretionary-expungement-yes]}
            :to-mandatory-expungement-yes
@@ -181,7 +181,7 @@
             :children []}
            :2e
            {:title "Is the felony on the “always discretionary” list?"
-            :text "[felony list, only the discretionary ones]"
+            :text "Felony list (only the discretionary ones): https://github.com/AlexanderMann/clean-slate/raw/master/documents/FelonyChecklist1.31.17.pdf"
             :type :question
             :children [:to-discretionary-expungement-yes :to-2g-no]}
            :to-2g-no
@@ -191,7 +191,7 @@
             :children [:2g]}
            :2f
            {:title "Is the misdemeanor on the “always discretionary” list?"
-            :text "[misdemeanor list, only the discretionary only]"
+            :text "Misdemeanor list (only the discretionary ones): https://github.com/AlexanderMann/clean-slate/raw/master/documents/MisdemeanorChecklist3.8.16.pdf"
             :type :question
             :children [:to-discretionary-expungement-yes :to-2g-no]}
            :2g
@@ -246,7 +246,7 @@
             :children [:3f]}
            :3c
            {:title "Does the case include a serious or violent conviction?"
-            :text "Check the serious and violent list [insert list]"
+            :text "Check the serious and violent list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/SeriousAndViolentConvctions.pdf"
             :type :question
             :children [:to-certificate-of-rehabilitation-yes :to-3d-no]}
            :to-certificate-of-rehabilitation-yes
@@ -266,7 +266,7 @@
             :children [:3d]}
            :3d
            {:title "Is there a prior conviction (prior to the case) for a serious or violent conviction on the serious and violent list?"
-            :text "Check the serious and violent list [insert list]"
+            :text "Check the serious and violent: https://github.com/AlexanderMann/clean-slate/raw/master/documents/SeriousAndViolentConvctions.pdf"
             :type :question
             :children [:to-certificate-of-rehabilitation-yes :to-3e-no]}
            :to-3e-no
@@ -276,7 +276,7 @@
             :children [:3e]}
            :3e
            {:title "Does the case include an otherwise excluded conviction?"
-            :text "Check the excluded conviction list [insert list]"
+            :text "Check the excluded conviction list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/AdditionalExcludedFelonies.pdf"
             :type :question
             :children [:to-certificate-of-rehabilitation-yes
                        :to-discretionary-expungement-no]}
@@ -292,7 +292,7 @@
             :children []}
            :3f
            {:title "Did you go to state prison or to county jail for the sentence?"
-            :text "Check the excluded conviction list [insert list]"
+            :text "Check the excluded conviction list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/AdditionalExcludedFelonies.pdf"
             :type :question
             :children [:to-certificate-of-rehabilitation-prison
                        :to-discretionary-expungement-jail]}
