@@ -1,6 +1,49 @@
 {
   "root": "1a",
   "nodes": {
+    "1a": {
+      "title": "Can the case be reduced by a recent Proposition?",
+      "text": "Does the case involve marijuana?",
+      "type": "question",
+      "children": ["to-marijuana-reduction", "to-1b-no"]
+    },
+    "to-marijuana-reduction": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["marijuana-reduction-lists"]
+    },
+    "marijuana-reduction-lists": {
+      "title": "Are you eligible for marijuana reduction?",
+      "text":
+        "See following if eligible for marijuana reduction: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop64CheatSheet.pdf",
+      "type": "question",
+      "children": ["to-2-yes", "to-1b-no"]
+    },
+    "to-1b-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["1b"]
+    },
+    "to-2-yes": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["2a"]
+    },
+    "1b": {
+      "title": "Is it a felony conviction for possession of drugs?",
+      "text": "(health and safety code, 11350, 11357, 11377)",
+      "type": "question",
+      "children": ["to-1c-yes", "to-prop-47-prior-exclusion-2-yes"]
+    },
+    "to-prop-47-prior-exclusion-2-yes": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["prop-47-prior-exclusion-2"]
+    },
     "3g-info": {
       "title": "PC 1203.4a Dismissal",
       "text": "You are eligible for dismissal under PC 1203.4a.",
@@ -31,13 +74,6 @@
         "Note: if a person was initially sentenced to some jail time and probation, this is probation. However, if probation was revoked and the person finished their term in prison or jail, it is NOT probation",
       "type": "option",
       "children": ["to-2b-info"]
-    },
-    "marijuana-reduction-lists": {
-      "title": "Are you eligible for marijuana reduction?",
-      "text":
-        "See following if eligible for marijuana reduction: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop64CheatSheet.pdf",
-      "type": "question",
-      "children": ["to-2-yes", "to-1b-no"]
     },
     "to-1d": {
       "title": "Continue...",
@@ -125,19 +161,6 @@
       "type": "question",
       "children": ["to-2d-probation", "to-3h-prison"]
     },
-    "prop-47-prior-exclusion-2": {
-      "title": "Do you have a prior on the Prop 47 exclusions list?",
-      "text":
-        "See Prop 47 Exclusion List: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop47ShortList.pdf",
-      "type": "question",
-      "children": ["to-2-yes", "to-2-no"]
-    },
-    "1b": {
-      "title": "Is it a felony conviction for possession of drugs?",
-      "text": "(health and safety code, 11350, 11357, 11377)",
-      "type": "question",
-      "children": ["to-1c-yes", "to-prop-47-prior-exclusion-2-no"]
-    },
     "3d": {
       "title":
         "Is there a prior conviction (prior to the case) for a serious or violent conviction on the serious and violent list?",
@@ -157,12 +180,6 @@
       "text": "",
       "type": "option",
       "children": ["3h"]
-    },
-    "to-2-yes": {
-      "title": "Yes",
-      "text": "",
-      "type": "option",
-      "children": ["2a"]
     },
     "to-3e-no": {
       "title": "No",
@@ -241,12 +258,6 @@
       "type": "info",
       "children": ["to-1d"]
     },
-    "1a": {
-      "title": "Can the case be reduced by a recent Proposition?",
-      "text": "Does the case involve marijuana?",
-      "type": "question",
-      "children": ["to-marijuana-reduction", "to-1b-no"]
-    },
     "2d": {
       "title": "Is the conviction listed on the wobblette list?",
       "text":
@@ -300,12 +311,6 @@
       "text": "",
       "type": "option",
       "children": ["2e"]
-    },
-    "to-marijuana-reduction": {
-      "title": "Yes",
-      "text": "",
-      "type": "option",
-      "children": ["marijuana-reduction-lists"]
     },
     "to-discretionary-expungement-yes": {
       "title": "Yes",
@@ -394,12 +399,6 @@
         "to-discretionary-expungement-no"
       ]
     },
-    "to-prop-47-prior-exclusion-2-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["prop-47-prior-exclusion-2"]
-    },
     "3g": {
       "title": "Is the conviction listed on the Wobblett list?",
       "text": "[insert list here]",
@@ -430,12 +429,6 @@
       "text": "",
       "type": "question",
       "children": ["before-oct-1-2011", "on-or-after-oct-1-2011"]
-    },
-    "to-1b-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["1b"]
     }
   }
 }

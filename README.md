@@ -20,6 +20,6 @@ mkdir docs/; \
 mv app/build/* docs/; \
 sed -e "s/# CURRENT SHA.*/# CURRENT SHA `git rev-parse HEAD`/g" app.appcache >> docs/app.appcache; \
 git add docs/; \
-git commit -m "deploy versions"; \
+git commit -m "deploy version"; \
 git push origin master;
 ```
