@@ -44,6 +44,13 @@
       "type": "option",
       "children": ["prop-47-prior-exclusion-2"]
     },
+    "prop-47-prior-exclusion-2": {
+      "title": "Do you have a prior on the Prop 47 exclusions list?",
+      "text":
+        "See Prop 47 Exclusion List: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop47ShortList.pdf",
+      "type": "question",
+      "children": ["to-2-yes", "to-2-no"]
+    },
     "3g-info": {
       "title": "PC 1203.4a Dismissal",
       "text": "You are eligible for dismissal under PC 1203.4a.",

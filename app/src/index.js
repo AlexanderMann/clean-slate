@@ -1,9 +1,9 @@
-import './main.css';
-import { Main } from './Main.elm';
-import registerServiceWorker from './registerServiceWorker';
-import data from '../../data/flow.json'
+import "./main.css";
+import { Main } from "./Main.elm";
+import registerServiceWorker from "./registerServiceWorker";
+import data from "../../data/flow.json";
 
-console.log('data: ', data);
+console.log("data: ", data);
 // next keys and turn nodes into an flat array
 const nodes = Object.keys(data.nodes).map(key => {
   let node = data.nodes[key];
@@ -14,10 +14,11 @@ const nodes = Object.keys(data.nodes).map(key => {
   node.id = key;
   return node;
 });
-console.log('nodes: ', nodes);
-Main.embed(document.getElementById('root'), {
+console.log("nodes: ", nodes);
+Main.embed(document.getElementById("root"), {
   root: data.root,
-  nodes: nodes
+  nodes: nodes,
+  lastUpdatedAt: document.lastModified
 });
 
 registerServiceWorker();

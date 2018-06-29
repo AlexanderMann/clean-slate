@@ -27,12 +27,14 @@ type alias Model =
     { currentNodeId : String
     , nodes : List Node
     , results : List String
+    , lastUpdatedAt : String
     }
 
 
 type alias Flags =
     { root : String
     , nodes : List Node
+    , lastUpdatedAt : String
     }
 
 
@@ -41,6 +43,7 @@ initialModel =
     { currentNodeId = ""
     , nodes = []
     , results = []
+    , lastUpdatedAt = ""
     }
 
 
@@ -50,6 +53,7 @@ init flags =
         | currentNodeId = flags.root
         , nodes = flags.nodes
         , results = []
+        , lastUpdatedAt = flags.lastUpdatedAt
       }
     , Cmd.none
     )
@@ -156,6 +160,8 @@ view model =
                 , (card model.currentNodeId model.nodes)
                 ]
             ]
+        , div [ id "footer" ]
+            [ h5 [] [ (text ("last updated at " ++ model.lastUpdatedAt)) ] ]
         ]
 
 
