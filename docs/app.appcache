@@ -3,3 +3,8 @@ CACHE:
 index.html
 service-worker.js
 # CURRENT SHA f780e6541eea43fa188e024f93f1580393417a3d
+CACHE MANIFEST
+CACHE:
+index.html
+service-worker.js
+# CURRENT SHA a001d2257d5c4ae829643876003677c90ab26235
