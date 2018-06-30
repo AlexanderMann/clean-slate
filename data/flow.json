@@ -32,7 +32,7 @@
       "type": "option",
       "children": ["prop-64"]
     },
-    "prop-46": {
+    "prop-64": {
       "title": "Prop 64 Petition",
       "text": "You will file a Prop 64 petition",
       "type": "info",
