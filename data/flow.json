@@ -337,7 +337,8 @@
     },
     "3g": {
       "title": "Is the conviction listed on the Wobblett list?",
-      "text": "[insert list here]",
+      "text":
+        "https://github.com/AlexanderMann/clean-slate/raw/master/documents/MisdemeanorChecklist3.8.16.pdf",
       "type": "question",
       "children": ["to-3h-no", "to-3h-yes-info"]
     },
