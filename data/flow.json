@@ -18,7 +18,7 @@
       "text":
         "See following if eligible for marijuana reduction: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop64CheatSheet.pdf",
       "type": "question",
-      "children": ["to-2-yes", "to-1b-no"]
+      "children": ["to-prop-64-yes", "to-1b-no"]
     },
     "to-1b-no": {
       "title": "No",
@@ -26,8 +26,20 @@
       "type": "option",
       "children": ["1b"]
     },
-    "to-2-yes": {
+    "to-prop-64-yes": {
       "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["prop-64"]
+    },
+    "prop-46": {
+      "title": "Prop 64 Petition",
+      "text": "You will file a Prop 64 petition",
+      "type": "info",
+      "children": ["to-2a-continue"]
+    },
+    "to-2a-continue": {
+      "title": "Continue...",
       "text": "",
       "type": "option",
       "children": ["2a"]
@@ -36,7 +48,7 @@
       "title": "Is it a felony conviction for possession of drugs?",
       "text": "(health and safety code, 11350, 11357, 11377)",
       "type": "question",
-      "children": ["to-1c-yes", "to-prop-47-prior-exclusion-2-yes"]
+      "children": ["to-prop-47-prior-exclusion-2-yes", "to-1c-no"]
     },
     "to-prop-47-prior-exclusion-2-yes": {
       "title": "Yes",
@@ -44,12 +56,300 @@
       "type": "option",
       "children": ["prop-47-prior-exclusion-2"]
     },
+    "to-1c-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["1c"]
+    },
     "prop-47-prior-exclusion-2": {
       "title": "Do you have a prior on the Prop 47 exclusions list?",
       "text":
         "See Prop 47 Exclusion List: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop47ShortList.pdf",
       "type": "question",
-      "children": ["to-2-yes", "to-2-no"]
+      "children": ["to-2-yes", "to-prop-47-1d-no"]
+    },
+    "to-2-yes": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["2a"]
+    },
+    "to-prop-47-1d-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["to-prop-47-1d-info"]
+    },
+    "to-prop-47-1d-info": {
+      "title": "Prop 47 Petition",
+      "text": "You will file a Prop 47 petition",
+      "type": "info",
+      "children": ["to-1d"]
+    },
+    "to-1d": {
+      "title": "Continue...",
+      "text": "",
+      "type": "option",
+      "children": ["1d"]
+    },
+    "1c": {
+      "title": "Is it a felony conviction for theft of under $950?",
+      "text": "(Penal Code 490.2, 459.5, 496(a), 473(b), 476a,(b), 666)",
+      "type": "question",
+      "children": ["to-prop-47-prior-exclusion-2-yes", "to-2-no"]
+    },
+    "to-2-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["2a"]
+    },
+    "1d": {
+      "title": "What was the sentence?",
+      "text": "",
+      "type": "question",
+      "children": ["to-2d-probation", "to-3h-prison"]
+    },
+    "to-2d-probation": {
+      "title": "Probation",
+      "text": "",
+      "type": "option",
+      "children": ["2d"]
+    },
+    "to-3h-prison": {
+      "title": "Prison",
+      "text": "",
+      "type": "option",
+      "children": ["3h"]
+    },
+    "2a": {
+      "title":
+        "Is the case eligible for dismissal or reduction under the Penal Code?",
+      "text": "What was the sentence?",
+      "type": "question",
+      "children": ["probation-yes", "probation-no"]
+    },
+    "probation-yes": {
+      "title":
+        "Probation: !NOTE! if a person was initially sentenced to some jail time and probation, this is probation. However, if probation was revoked and the person finished their term in prison or jail, it is NOT probation",
+      "text": "",
+      "type": "option",
+      "children": ["to-2b-info"]
+    },
+    "probation-no": {
+      "title": "Everything except probation",
+      "text": "",
+      "type": "option",
+      "children": ["3a"]
+    },
+    "to-2b-info": {
+      "title": "Penal Code 1203.4 Petition",
+      "text": "You are eligible to petition for relief under Penal Code 1203.4",
+      "type": "info",
+      "children": ["to-2b"]
+    },
+    "to-2b": {
+      "title": "Continue...",
+      "text": "",
+      "type": "option",
+      "children": ["2b"]
+    },
+    "2b": {
+      "title": "What is the level of conviction?",
+      "text": "",
+      "type": "question",
+      "children": ["to-2c-felony", "to-2d-misdemeanor", "to-2f-infraction"]
+    },
+    "to-2c-felony": {
+      "title": "Felony",
+      "text": "",
+      "type": "option",
+      "children": ["2c"]
+    },
+    "to-2d-misdemeanor": {
+      "title": "Misdemeanor",
+      "text": "",
+      "type": "option",
+      "children": ["2d"]
+    },
+    "to-2f-infraction": {
+      "title": "Infraction",
+      "text": "",
+      "type": "option",
+      "children": ["2f"]
+    },
+    "2c": {
+      "title": "Is the conviction listed on the wobbler?",
+      "text":
+        "Felony list (just the wobblers): https://github.com/AlexanderMann/clean-slate/raw/master/documents/FelonyChecklist1.31.17.pdf",
+      "type": "question",
+      "children": ["to-2e-no", "to-discretionary-expungement-yes"]
+    },
+    "to-2e-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["2e"]
+    },
+    "to-discretionary-expungement-yes": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["discretionary-expungement"]
+    },
+    "discretionary-expungement": {
+      "title":
+        "You are eligible for a Discretionary Expungement under 1203.42 and reduction under 17(b)",
+      "text":
+        "File a CR-180, CR-181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.",
+      "type": "terminal",
+      "children": []
+    },
+    "2d": {
+      "title": "Is the conviction listed on the wobblette list?",
+      "text":
+        "Misdemeanor list (just the wobblettes) https://github.com/AlexanderMann/clean-slate/raw/master/documents/MisdemeanorChecklist3.8.16.pdf",
+      "type": "question",
+      "children": ["to-discretionary-expungement-yes", "to-2f-no"]
+    },
+    "to-2f-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["2f"]
+    },
+    "2e": {
+      "title": "Is the felony on the \u201calways discretionary\u201d list?",
+      "text":
+        "Felony list (only the discretionary ones): https://github.com/AlexanderMann/clean-slate/raw/master/documents/FelonyChecklist1.31.17.pdf",
+      "type": "question",
+      "children": ["to-discretionary-expungement-yes", "to-2g-no"]
+    },
+    "to-2g-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["2g"]
+    },
+    "2f": {
+      "title":
+        "Is the misdemeanor on the \u201calways discretionary\u201d list?",
+      "text":
+        "Misdemeanor list (only the discretionary ones): https://github.com/AlexanderMann/clean-slate/raw/master/documents/MisdemeanorChecklist3.8.16.pdf",
+      "type": "question",
+      "children": ["to-discretionary-expungement-yes", "to-2g-no"]
+    },
+    "2g": {
+      "title":
+        "Did you complete probation without any additional convictions or probation revocations during probation?",
+      "text": "",
+      "type": "question",
+      "children": [
+        "to-mandatory-expungement-yes",
+        "to-discretionary-expungement-no"
+      ]
+    },
+    "to-mandatory-expungement-yes": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["mandatory-expungement"]
+    },
+    "to-discretionary-expungement-no": {
+      "title": "No",
+      "text": "",
+      "type": "option",
+      "children": ["discretionary-expungement"]
+    },
+    "mandatory-expungement": {
+      "title": "Mandatory expungement 1203.4",
+      "text":
+        "You are eligible for a mandatory expungement under 1203.4. File a CR180, CR181, fee waiver, and any other county specific forms, but you are not required to filed a declaration (MC-31)",
+      "type": "terminal",
+      "children": []
+    },
+    "3a": {
+      "title": "Everything else, other than probation",
+      "text":
+        "What was the level of conviction? [Flow Chart Outline for CA Criminal Record Expungement]. Note, if the conviction is eligible for reduction under a proposition, treat it as the reduced level.",
+      "type": "question",
+      "children": ["felony-3b", "misdemeanor-3g", "infraction-3g"]
+    },
+    "felony-3b": {
+      "title": "Felony",
+      "text": "",
+      "type": "option",
+      "children": ["3b"]
+    },
+    "misdemeanor-3g": {
+      "title": "Misdemeanor",
+      "text": "",
+      "type": "option",
+      "children": ["3g-info"]
+    },
+    "infraction-3g": {
+      "title": "Infraction",
+      "text": "",
+      "type": "option",
+      "children": ["3g-info"]
+    },
+    "3b": {
+      "title": "When was the conviction?",
+      "text": "",
+      "type": "question",
+      "children": ["before-oct-1-2011", "on-or-after-oct-1-2011"]
+    },
+    "3c": {
+      "title": "Does the case include a serious or violent conviction?",
+      "text":
+        "Check the serious and violent list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/SeriousAndViolentConvctions.pdf",
+      "type": "question",
+      "children": ["to-certificate-of-rehabilitation-yes", "to-3d-no"]
+    },
+    "3d": {
+      "title":
+        "Is there a prior conviction (prior to the case) for a serious or violent conviction on the serious and violent list?",
+      "text":
+        "Check the serious and violent: https://github.com/AlexanderMann/clean-slate/raw/master/documents/SeriousAndViolentConvctions.pdf",
+      "type": "question",
+      "children": ["to-certificate-of-rehabilitation-yes", "to-3e-no"]
+    },
+    "3e": {
+      "title": "Does the case include an otherwise excluded conviction?",
+      "text":
+        "Check the excluded conviction list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/AdditionalExcludedFelonies.pdf",
+      "type": "question",
+      "children": [
+        "to-certificate-of-rehabilitation-yes",
+        "to-discretionary-expungement-no"
+      ]
+    },
+    "3f": {
+      "title": "Did you go to state prison or to county jail for the sentence?",
+      "text":
+        "Check the excluded conviction list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/AdditionalExcludedFelonies.pdf",
+      "type": "question",
+      "children": [
+        "to-certificate-of-rehabilitation-prison",
+        "to-discretionary-expungement-jail"
+      ]
+    },
+    "3g": {
+      "title": "Is the conviction listed on the Wobblett list?",
+      "text": "[insert list here]",
+      "type": "question",
+      "children": ["to-3h-no", "to-3h-yes-info"]
+    },
+    "3h": {
+      "title":
+        "Did one year pass, from the date of release or sentencing\u2014whichever happened later-- without another conviction?",
+      "text": "",
+      "type": "question",
+      "children": [
+        "to-mandatory-expungement-yes",
+        "to-discretionary-expungement-no"
+      ]
     },
     "3g-info": {
       "title": "PC 1203.4a Dismissal",
@@ -63,57 +363,11 @@
       "type": "option",
       "children": ["3c"]
     },
-    "to-2c-felony": {
-      "title": "Felony",
-      "text": "",
-      "type": "option",
-      "children": ["2c"]
-    },
     "to-3g": {
       "title": "Continue...",
       "text": "",
       "type": "option",
       "children": ["3g"]
-    },
-    "probation-yes": {
-      "title": "Probation",
-      "text":
-        "Note: if a person was initially sentenced to some jail time and probation, this is probation. However, if probation was revoked and the person finished their term in prison or jail, it is NOT probation",
-      "type": "option",
-      "children": ["to-2b-info"]
-    },
-    "to-1d": {
-      "title": "Continue...",
-      "text": "",
-      "type": "option",
-      "children": ["1d"]
-    },
-    "to-2b-info": {
-      "title": "Penal Code 1203.4 Petition",
-      "text": "You are eligible to petition for relief under Penal Code 1203.4",
-      "type": "info",
-      "children": ["to-2b"]
-    },
-    "2c": {
-      "title": "Is the conviction listed on the wobbler?",
-      "text":
-        "Felony list (just the wobblers): https://github.com/AlexanderMann/clean-slate/raw/master/documents/FelonyChecklist1.31.17.pdf",
-      "type": "question",
-      "children": ["to-2e-no", "to-discretionary-expungement-yes"]
-    },
-    "felony-3b": {
-      "title": "Felony",
-      "text": "",
-      "type": "option",
-      "children": ["3b"]
-    },
-    "discretionary-expungement": {
-      "title":
-        "You are eligible for a Discretionary Expungement under 1203.42 and reduction under 17(b)",
-      "text":
-        "File a CR-180, CR-181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.",
-      "type": "terminal",
-      "children": []
     },
     "to-certificate-of-rehabilitation-yes": {
       "title": "Yes",
@@ -121,63 +375,14 @@
       "type": "option",
       "children": ["certificate-of-rehabilitation"]
     },
-    "1c": {
-      "title": "Is it a felony conviction for theft of under $950?",
-      "text": "(Penal Code 490.2, 459.5, 496(a), 473(b), 476a,(b), 666)",
-      "type": "question",
-      "children": ["to-2-yes", "to-prop-47-prior-exclusion-1d-no"]
-    },
-    "2e": {
-      "title": "Is the felony on the \u201calways discretionary\u201d list?",
-      "text":
-        "Felony list (only the discretionary ones): https://github.com/AlexanderMann/clean-slate/raw/master/documents/FelonyChecklist1.31.17.pdf",
-      "type": "question",
-      "children": ["to-discretionary-expungement-yes", "to-2g-no"]
-    },
     "3h-info": {
       "title": "You are eligible to petition for reduction",
       "text": "Under penal code 17(d)(2)",
       "type": "info",
       "children": ["to-3h"]
     },
-    "3f": {
-      "title": "Did you go to state prison or to county jail for the sentence?",
-      "text":
-        "Check the excluded conviction list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/AdditionalExcludedFelonies.pdf",
-      "type": "question",
-      "children": [
-        "to-certificate-of-rehabilitation-prison",
-        "to-discretionary-expungement-jail"
-      ]
-    },
-    "to-1d-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["to-1d-info"]
-    },
     "to-3h": {
       "title": "Continue...",
-      "text": "",
-      "type": "option",
-      "children": ["3h"]
-    },
-    "1d": {
-      "title": "What was the sentence?",
-      "text": "",
-      "type": "question",
-      "children": ["to-2d-probation", "to-3h-prison"]
-    },
-    "3d": {
-      "title":
-        "Is there a prior conviction (prior to the case) for a serious or violent conviction on the serious and violent list?",
-      "text":
-        "Check the serious and violent: https://github.com/AlexanderMann/clean-slate/raw/master/documents/SeriousAndViolentConvctions.pdf",
-      "type": "question",
-      "children": ["to-certificate-of-rehabilitation-yes", "to-3e-no"]
-    },
-    "to-3h-prison": {
-      "title": "Prison",
       "text": "",
       "type": "option",
       "children": ["3h"]
@@ -207,105 +412,11 @@
       "type": "option",
       "children": ["3d"]
     },
-    "to-2d-misdemeanor": {
-      "title": "Misdemeanor",
-      "text": "",
-      "type": "option",
-      "children": ["2d"]
-    },
-    "to-prop-47-prior-exclusion-1d-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["prop-47-prior-exclusion-1d"]
-    },
-    "infraction-3g": {
-      "title": "Infraction",
-      "text": "",
-      "type": "option",
-      "children": ["3g-info"]
-    },
-    "2f": {
-      "title":
-        "Is the misdemeanor on the \u201calways discretionary\u201d list?",
-      "text":
-        "Misdemeanor list (only the discretionary ones): https://github.com/AlexanderMann/clean-slate/raw/master/documents/MisdemeanorChecklist3.8.16.pdf",
-      "type": "question",
-      "children": ["to-discretionary-expungement-yes", "to-2g-no"]
-    },
-    "to-2g-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["2g"]
-    },
-    "2a": {
-      "title":
-        "Is the case eligible for dismissal or reduction under the Penal Code?",
-      "text": "What was the sentence?",
-      "type": "question",
-      "children": ["probation-yes", "probation-no"]
-    },
-    "to-discretionary-expungement-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["discretionary-expungement"]
-    },
-    "3a": {
-      "title": "Everything else, other than probation",
-      "text":
-        "What was the level of conviction? [Flow Chart Outline for CA Criminal Record Expungement]. Note, if the conviction is eligible for reduction under a proposition, treat it as the reduced level.",
-      "type": "question",
-      "children": ["felony-3b", "misdemeanor-3g", "infraction-3g"]
-    },
-    "to-1d-info": {
-      "title": "Prop 47 Petition",
-      "text": "You will file a Prop 47 petition",
-      "type": "info",
-      "children": ["to-1d"]
-    },
-    "2d": {
-      "title": "Is the conviction listed on the wobblette list?",
-      "text":
-        "Misdemeanor list (just the wobblettes) https://github.com/AlexanderMann/clean-slate/raw/master/documents/MisdemeanorChecklist3.8.16.pdf",
-      "type": "question",
-      "children": ["to-2f-no", "to-discretionary-expungement-yes"]
-    },
-    "to-2d-probation": {
-      "title": "Probation",
-      "text": "",
-      "type": "option",
-      "children": ["2d"]
-    },
     "to-certificate-of-rehabilitation-prison": {
       "title": "Prison",
       "text": "",
       "type": "option",
       "children": ["certificate-of-rehabilitation"]
-    },
-    "3c": {
-      "title": "Does the case include a serious or violent conviction?",
-      "text":
-        "Check the serious and violent list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/SeriousAndViolentConvctions.pdf",
-      "type": "question",
-      "children": ["to-certificate-of-rehabilitation-yes", "to-3d-no"]
-    },
-    "to-1c-yes": {
-      "title": "Yes",
-      "text": "",
-      "type": "option",
-      "children": ["1c"]
-    },
-    "3e": {
-      "title": "Does the case include an otherwise excluded conviction?",
-      "text":
-        "Check the excluded conviction list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/AdditionalExcludedFelonies.pdf",
-      "type": "question",
-      "children": [
-        "to-certificate-of-rehabilitation-yes",
-        "to-discretionary-expungement-no"
-      ]
     },
     "to-3h-yes-info": {
       "title": "Yes",
@@ -313,129 +424,17 @@
       "type": "option",
       "children": ["3h-info"]
     },
-    "to-2e-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["2e"]
-    },
-    "to-discretionary-expungement-yes": {
-      "title": "Yes",
-      "text": "",
-      "type": "option",
-      "children": ["discretionary-expungement"]
-    },
-    "2g": {
-      "title":
-        "Did you complete probation without any additional convictions or probation revocations during probation?",
-      "text": "",
-      "type": "question",
-      "children": [
-        "to-mandatory-expungement-yes",
-        "to-discretionary-expungement-no"
-      ]
-    },
     "to-discretionary-expungement-jail": {
       "title": "Jail",
       "text": "",
       "type": "option",
       "children": ["discretionary-expungement"]
     },
-    "2b": {
-      "title": "What is the level of conviction?",
-      "text": "",
-      "type": "question",
-      "children": ["to-2c-felony", "to-2d-misdemeanor", "to-2f-infraction"]
-    },
-    "to-2": {
-      "title": "Continue...",
-      "text": "",
-      "type": "option",
-      "children": ["2a"]
-    },
-    "misdemeanor-3g": {
-      "title": "Misdemeanor",
-      "text": "",
-      "type": "option",
-      "children": ["3g-info"]
-    },
-    "to-2b": {
-      "title": "Continue...",
-      "text": "",
-      "type": "option",
-      "children": ["2b"]
-    },
-    "mandatory-expungement": {
-      "title": "Mandatory expungement 1203.4",
-      "text":
-        "You are eligible for a mandatory expungement under 1203.4. File a CR180, CR181, fee waiver, and any other county specific forms, but you are not required to filed a declaration (MC-31)",
-      "type": "terminal",
-      "children": []
-    },
-    "to-2f-infraction": {
-      "title": "Infraction",
-      "text": "",
-      "type": "option",
-      "children": ["2f"]
-    },
-    "to-2-no": {
-      "title": "No",
-      "text": "",
-      "type": "option",
-      "children": ["to-2-info"]
-    },
-    "probation-no": {
-      "title": "Everything except probation",
-      "text": "",
-      "type": "option",
-      "children": ["3a"]
-    },
     "on-or-after-oct-1-2011": {
       "title": "On October 1, 2011 or more recently",
       "text": "",
       "type": "option",
       "children": ["3f"]
-    },
-    "3h": {
-      "title":
-        "Did one year pass, from the date of release or sentencing\u2014whichever happened later-- without another conviction?",
-      "text": "",
-      "type": "question",
-      "children": [
-        "to-mandatory-expungement-yes",
-        "to-discretionary-expungement-no"
-      ]
-    },
-    "3g": {
-      "title": "Is the conviction listed on the Wobblett list?",
-      "text": "[insert list here]",
-      "type": "question",
-      "children": ["to-3h-no", "to-3h-yes-info"]
-    },
-    "prop-47-prior-exclusion-1d": {
-      "title": "Do you have a prior on the Prop 47 exclusions list?",
-      "text":
-        "See Prop 47 Exclusion List: https://github.com/AlexanderMann/clean-slate/raw/master/documents/Prop47ShortList.pdf",
-      "type": "question",
-      "children": ["to-2-yes", "to-1d-no"]
-    },
-    "to-2-info": {
-      "title": "Prop 47 Petition",
-      "text": "You will file a Prop 47 petition",
-      "type": "info",
-      "children": ["to-2"]
-    },
-    "to-mandatory-expungement-yes": {
-      "title": "Yes",
-      "text": "",
-      "type": "option",
-      "children": ["mandatory-expungement"]
-    },
-    "3b": {
-      "title": "When was the conviction?",
-      "text": "",
-      "type": "question",
-      "children": ["before-oct-1-2011", "on-or-after-oct-1-2011"]
     }
   }
 }
