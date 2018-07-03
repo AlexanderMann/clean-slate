@@ -199,8 +199,7 @@
       "children": ["discretionary-expungement"]
     },
     "discretionary-expungement": {
-      "title":
-        "You are eligible for a Discretionary Expungement under 1203.42 and reduction under 17(b)",
+      "title": "You are eligible for a Discretionary Expungement under 1203.42",
       "text":
         "File a CR-180, CR-181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.",
       "type": "terminal",
@@ -294,6 +293,18 @@
       "type": "option",
       "children": ["3g-info"]
     },
+    "3g-info": {
+      "title": "PC 1203.4a Dismissal",
+      "text": "You are eligible for dismissal under PC 1203.4a.",
+      "type": "info",
+      "children": ["to-3g"]
+    },
+    "to-3g": {
+      "title": "Continue...",
+      "text": "",
+      "type": "option",
+      "children": ["3g"]
+    },
     "3b": {
       "title": "When was the conviction?",
       "text": "",
@@ -327,13 +338,24 @@
     },
     "3f": {
       "title": "Did you go to state prison or to county jail for the sentence?",
-      "text":
-        "Check the excluded conviction list: https://github.com/AlexanderMann/clean-slate/raw/master/documents/AdditionalExcludedFelonies.pdf",
+      "text": "",
       "type": "question",
       "children": [
         "to-certificate-of-rehabilitation-prison",
         "to-discretionary-expungement-jail"
       ]
+    },
+    "to-certificate-of-rehabilitation-prison": {
+      "title": "Prison",
+      "text": "",
+      "type": "option",
+      "children": ["certificate-of-rehabilitation"]
+    },
+    "to-discretionary-expungement-jail": {
+      "title": "Jail",
+      "text": "",
+      "type": "option",
+      "children": ["discretionary-expungement"]
     },
     "3g": {
       "title": "Is the conviction listed on the Wobblett list?",
@@ -342,39 +364,17 @@
       "type": "question",
       "children": ["to-3h-no", "to-3h-yes-info"]
     },
-    "3h": {
-      "title":
-        "Did one year pass, from the date of release or sentencing\u2014whichever happened later-- without another conviction?",
-      "text": "",
-      "type": "question",
-      "children": [
-        "to-mandatory-expungement-yes",
-        "to-discretionary-expungement-no"
-      ]
-    },
-    "3g-info": {
-      "title": "PC 1203.4a Dismissal",
-      "text": "You are eligible for dismissal under PC 1203.4a.",
-      "type": "info",
-      "children": ["to-3g"]
-    },
-    "before-oct-1-2011": {
-      "title": "Before October 1, 2011",
+    "to-3h-no": {
+      "title": "No",
       "text": "",
       "type": "option",
-      "children": ["3c"]
+      "children": ["3h"]
     },
-    "to-3g": {
-      "title": "Continue...",
-      "text": "",
-      "type": "option",
-      "children": ["3g"]
-    },
-    "to-certificate-of-rehabilitation-yes": {
+    "to-3h-yes-info": {
       "title": "Yes",
       "text": "",
       "type": "option",
-      "children": ["certificate-of-rehabilitation"]
+      "children": ["3h-info"]
     },
     "3h-info": {
       "title": "You are eligible to petition for reduction",
@@ -388,11 +388,53 @@
       "type": "option",
       "children": ["3h"]
     },
-    "to-3h-no": {
+    "3h": {
+      "title":
+        "Did one year pass, from the date of release or sentencing\u2014whichever happened later-- without another conviction?",
+      "text": "",
+      "type": "question",
+      "children": [
+        "to-1203-4a-mandatory-expungement-yes",
+        "to-1203-4a-discretionary-expungement-no"
+      ]
+    },
+    "to-1203-4a-mandatory-expungement-yes": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["1203-4a-mandatory-expungement"]
+    },
+    "1203-4a-mandatory-expungement": {
+      "title": "Mandatory expungement 1203.4a",
+      "text":
+        "You are eligible for a mandatory expungement under 1203.4a. File a CR180, CR181, fee waiver, and any other county specific forms, but you are not required to filed a declaration (MC-31)",
+      "type": "terminal",
+      "children": []
+    },
+    "to-1203-4a-discretionary-expungement-no": {
       "title": "No",
       "text": "",
       "type": "option",
-      "children": ["3h"]
+      "children": ["1203-4a-discretionary-expungement"]
+    },
+    "1203-4a-discretionary-expungement": {
+      "title": "You are eligible for a Discretionary Expungement under 1203.4a",
+      "text":
+        "File a CR-180, CR-181, fee waiver, declaration of MC-31 form, letters of support from community members, and any other county specific forms. You will need to show the court why it should grant your petition.",
+      "type": "terminal",
+      "children": []
+    },
+    "before-oct-1-2011": {
+      "title": "Before October 1, 2011",
+      "text": "",
+      "type": "option",
+      "children": ["3c"]
+    },
+    "to-certificate-of-rehabilitation-yes": {
+      "title": "Yes",
+      "text": "",
+      "type": "option",
+      "children": ["certificate-of-rehabilitation"]
     },
     "to-3e-no": {
       "title": "No",
@@ -412,24 +454,6 @@
       "text": "",
       "type": "option",
       "children": ["3d"]
-    },
-    "to-certificate-of-rehabilitation-prison": {
-      "title": "Prison",
-      "text": "",
-      "type": "option",
-      "children": ["certificate-of-rehabilitation"]
-    },
-    "to-3h-yes-info": {
-      "title": "Yes",
-      "text": "",
-      "type": "option",
-      "children": ["3h-info"]
-    },
-    "to-discretionary-expungement-jail": {
-      "title": "Jail",
-      "text": "",
-      "type": "option",
-      "children": ["discretionary-expungement"]
     },
     "on-or-after-oct-1-2011": {
       "title": "On October 1, 2011 or more recently",

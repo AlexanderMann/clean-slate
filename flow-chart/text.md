@@ -161,7 +161,7 @@
 ### h. Did one year pass, from the date of release or sentencing—whichever happened later-- without another conviction?
 
 * i. If yes: ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)you are
-  eligible for a mandatory expungement under 1203.4. File a CR180, CR181, fee
+  eligible for a mandatory expungement under 1203.4a. File a CR180, CR181, fee
   waiver, and any other county specific forms, but you are not required to filed
   a declaration (MC-31)
 * ii. If no: ![#FF0000](https://placehold.it/15/FF0000/000000?text=+)You are
