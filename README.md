@@ -4,13 +4,19 @@ Clean Slate workflow for Prisoners With Children
 
 Check out our navigator [here!](http://www.alxmnn.com/clean-slate/)
 
-## Disclaimer
+## A note on use
 
-The advice you find herein is not the same as legal counsel. Please seek a
-lawyer to help with your matters.
+**_You are welcome to use this material, but please do not charge for any
+services related to its use._**
 
-The creators of this Github Repo take no responsibility for the accuracy of
-information herein.
+## Disclaimer for non-attorneys
+
+This app is **_not intended to answer all your legal questions or take the place
+of an attorney._** Legal Services for Prisoners with Children (LSPC) does not
+provide direct legal representation. Laws and policies are subject to frequent
+change; it is your responsibility to make sure the information is up to date.
+The information in this app is based on California law only and is not
+applicable in other states.
 
 ## To Develop
 
